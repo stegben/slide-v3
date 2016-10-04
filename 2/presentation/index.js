@@ -33,7 +33,7 @@ import createTheme from "spectacle/lib/themes/default";
 
 import BgSlide from "./BgSlide";
 import MyListItem from "./MyListItem";
-
+import Outline from './outline';
 
 // Require CSS
 require("normalize.css");
@@ -73,6 +73,9 @@ export default class Presentation extends React.Component {
             <Text textSize="1.5em" lineHeight={1.3} margin="120px 0px 0px" bold textColor="white">
               Good Parts / Bad Parts / ESLint
             </Text>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+
           </BgSlide>
         </Deck>
       </Spectacle>
