@@ -567,15 +567,100 @@ export default class Presentation extends React.Component {
             </Heading>
           </BgSlide>
           <BgSlide transition={["slide"]}>
+            <Text textColor="primary" textSize="2em">
+              1. Javascript have some bad parts
+            </Text>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary" textSize="2em">
+              2. coding style matters
+            </Text>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/bind.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary" textSize="2em">
+              2. coding style matters
+            </Text>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  讀 code 的時間 90%，寫 code 的時間 10%
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  Project 應該保持一致，方便多人協作
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  善待你自己
+                </Text>
+              </ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary" textSize="2em">
+              3. bug-fix before run-time
+            </Text>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/bug.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
             <Heading size={1} lineHeight={2} textColor="white">
               What is ESLint?
             </Heading>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={2} lineHeight={2} textColor="white">
+              History
+            </Heading>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  JSLint (cannot turn-off rules...)
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  JSHint (too few rules...)
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  ESLint
+                </Text>
+              </ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/install.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
           </BgSlide>
           <BgSlide transition={["slide"]}>
             <Heading size={1} lineHeight={2} textColor="white">
               How to use ESLint?
             </Heading>
           </BgSlide>
+          <BgSlide transition={["slide"]}>
+
+          </BgSlide>
+          <Slide>
+
+          </Slide>
         </Deck>
       </Spectacle>
     );
