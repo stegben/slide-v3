@@ -33,15 +33,13 @@ import createTheme from "spectacle/lib/themes/default";
 
 import BgSlide from "./BgSlide";
 import MyListItem from "./MyListItem";
-import Outline from './outline';
-
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
-
+  why: require("../assets/why.jpg"),
 };
 
 preloader(images);
@@ -74,8 +72,247 @@ export default class Presentation extends React.Component {
               Good Parts / Bad Parts / ESLint
             </Text>
           </BgSlide>
-          <BgSlide transition={["slide"]}>
 
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary">JavaScript 是個很棒也很糟糕的程式語言</Text>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary">JavaScript is designed in 10 days.</Text>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary">
+              Inspired by the <a href="https://youtu.be/hQVTIJBZook">speech</a> given by Doug Crockford (inventor of JSON)
+            </Text>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={3} lineHeight={2} textColor="white">
+              Outline
+            </Heading>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  Bad Parts
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  Good Parts
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  ESLint
+                </Text>
+              </ListItem>
+            </List>
+          </BgSlide>
+
+        {/*
+
+          Bad part
+
+         */}
+          <BgSlide transition={["slide"]}>
+            <Heading size={3} lineHeight={2} textColor="white">
+              Bad Parts
+            </Heading>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  semicolon insertion
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  type transform (typeof)
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  numbers (isNaN, floating point)
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  global variables
+                </Text>
+              </ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={3} lineHeight={2} textColor="white">
+              semicolon insertion
+            </Heading>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/semicolon-insertion-2.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+            <Text textColor="primary">
+              or
+            </Text>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/semicolon-insertion-1.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+            <Text textColor="primary">
+              都幾?
+            </Text>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/semicolon-insertion-3.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+            <Text textColor="primary">
+              or
+            </Text>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/semicolon-insertion-4.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+            <Text textColor="primary">
+              都幾?
+            </Text>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary">
+              Javascript will automatically add semicolons during run-time,<br />
+              so the previous examples are not coding-style problem.
+            </Text>
+            <Appear>
+              <Heading size={1} textColor="white">
+                They are bugs!
+              </Heading>
+            </Appear>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/semicolon-insertion-bug-2.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+            <Text textColor="primary">
+              or
+            </Text>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/semicolon-insertion-bug-1.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/semicolon-insertion-bug-3.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+            <Text textColor="primary">
+              or
+            </Text>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/semicolon-insertion-bug-4.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Image src={images.why.replace("/", "")} style={{ width: '80%' }} />
+            <Appear>
+              <Text textColor="primary">
+                Because JS tries to add semicolon at the end of each line<br />
+                If nothing bad happend, the semicolon will remain there.
+              </Text>
+            </Appear>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={3} lineHeight={2} textColor="white">
+              Add semicolons manually!
+            </Heading>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={3} lineHeight={2} textColor="white">
+              semicolon insertion
+            </Heading>
+          </BgSlide>
+
+          {/*
+
+          Good part
+
+         */}
+
+          <BgSlide transition={["slide"]}>
+            <Heading size={3} lineHeight={2} textColor="white">
+              Good Parts
+            </Heading>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  prototype inheritance
+                </Text>
+              </ListItem>
+            </List>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  this bind
+                </Text>
+              </ListItem>
+            </List>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  closure
+                </Text>
+              </ListItem>
+            </List>
+          </BgSlide>
+
+          {/*
+
+          ESLint
+
+         */}
+
+          <BgSlide transition={["slide"]}>
+            <Heading size={3} lineHeight={2} textColor="white">
+              ESLint
+            </Heading>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  Why ESLint?
+                </Text>
+              </ListItem>
+            </List>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  What is ESLint?
+                </Text>
+              </ListItem>
+            </List>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  How to ESLint?
+                </Text>
+              </ListItem>
+            </List>
           </BgSlide>
         </Deck>
       </Spectacle>
