@@ -577,7 +577,7 @@ export default class Presentation extends React.Component {
             </Text>
             <CodePane
               lang="js"
-              source={require("raw!../assets/codes/bind.example")}
+              source={require("raw!../assets/codes/ugly.example")}
               margin="0 20px 0"
               textSize="0.6em"
             />
