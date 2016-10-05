@@ -255,7 +255,7 @@ export default class Presentation extends React.Component {
           </BgSlide>
           <BgSlide transition={["slide"]}>
             <Text textColor="primary" textSize="2em">
-              JS is Dynamic Week type.
+              JS is Dynamic Weak type.
             </Text>
             <List>
               <Appear>
@@ -268,7 +268,7 @@ export default class Presentation extends React.Component {
               <Appear>
                 <ListItem>
                   <Text textColor="primary">
-                    Week: implicity type conversion
+                    Weak: implicity type conversion
                   </Text>
                 </ListItem>
               </Appear>
