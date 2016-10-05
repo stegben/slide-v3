@@ -43,6 +43,8 @@ const images = {
   ctlinSay: require("../assets/ctlin-say.png"),
   npm2: require("../assets/npm2.png"),
   browsers: require("../assets/browsers.png"),
+  classI: require("../assets/class-i.png"),
+  prototypeI: require("../assets/prototype-i.png"),
 };
 
 preloader(images);
@@ -100,6 +102,11 @@ export default class Presentation extends React.Component {
               <ListItem>
                 <Text textColor="primary">
                   Good Parts
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  Dangerous Parts
                 </Text>
               </ListItem>
               <ListItem>
@@ -343,36 +350,9 @@ export default class Presentation extends React.Component {
             <Heading size={3} lineHeight={2} textColor="white">
               Good Parts
             </Heading>
-            <List>
-              <ListItem>
-                <Text textColor="primary">
-                  some property
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  prototype inheritance
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  this bind
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  closure
-                </Text>
-              </ListItem>
-            </List>
           </BgSlide>
           <BgSlide transition={["slide"]}>
-            <Heading size={1} lineHeight={2} textColor="white">
-              some property
-            </Heading>
-          </BgSlide>
-          <BgSlide transition={["slide"]}>
-            <Text textColor="primary">
+            <Text textColor="primary" textSize="2em">
               Simplicity
             </Text>
             <CodePane
@@ -381,9 +361,12 @@ export default class Presentation extends React.Component {
               margin="0 20px 0"
               textSize="0.6em"
             />
+            <Text textColor="primary">
+              By the way, it works with JSON directly!
+            </Text>
           </BgSlide>
           <BgSlide transition={["slide"]}>
-            <Text textColor="primary">
+            <Text textColor="primary" textSize="2em">
               Object-Oriented Programming
             </Text>
             <CodePane
@@ -394,7 +377,7 @@ export default class Presentation extends React.Component {
             />
           </BgSlide>
           <BgSlide transition={["slide"]}>
-            <Text textColor="primary">
+            <Text textColor="primary" textSize="2em">
               Functional Programming
             </Text>
             <CodePane
@@ -405,16 +388,149 @@ export default class Presentation extends React.Component {
             />
           </BgSlide>
           <BgSlide transition={["slide"]}>
+            <Text textColor="primary" textSize="2em">
+              lambda function (inspired by Scheme)
+            </Text>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/lambda.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary" textSize="2em">
+              Dynamic Objects (inspired by Self)
+            </Text>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/dynamic-objects.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
             <Text textColor="primary">
+              easy to mock property or methods
+            </Text>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary" textSize="2em">
+              Closure
+            </Text>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/closure.example")}
+              margin="0 20px 0"
+              textSize="0.5em"
+            />
+            <Text textColor="primary">
+              The independence variable can be referenced by object methods. <br />
+              One of the most important property of JS OOP.
+            </Text>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary" textSize="2em">
               Community
             </Text>
             <Image src={images.npm2.replace("/", "")} style={{ width: '80%' }} />
           </BgSlide>
           <BgSlide transition={["slide"]}>
-            <Text textColor="primary">
+            <Text textColor="primary" textSize="2em">
               Best of the Best: Cross Platform
             </Text>
             <Image src={images.browsers.replace("/", "")} style={{ width: '80%' }} />
+          </BgSlide>
+
+        {/*
+
+        Dangerous part
+
+         */}
+
+          <BgSlide transition={["slide"]}>
+            <Heading size={3} lineHeight={2} textColor="white">
+              Dangerous Parts
+            </Heading>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  this
+                </Text>
+              </ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary" textSize="2em">
+              Constructor are written in functions
+            </Text>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/constructor.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary" textSize="2em">
+              To add methods...
+            </Text>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/object-add-method.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary" textSize="2em">
+              It's confused what 'this' actually points to. <br />
+              'this' points to <em>who call the function</em>.
+            </Text>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/wrong-this.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/callback-wrong-this.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary" textSize="2em">
+              Use 'bind' to connect 'this' to the desire target (the original object, etc.)
+            </Text>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/bind.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+
+
+          <BgSlide transition={["slide"]}>
+            <Heading size={2} lineHeight={2} textColor="white">
+              Topics not mentioned:
+            </Heading>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  Prototype Inheritance
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  strict mode
+                </Text>
+              </ListItem>
+            </List>
           </BgSlide>
 
           {/*
@@ -440,10 +556,25 @@ export default class Presentation extends React.Component {
               </ListItem>
               <ListItem>
                 <Text textColor="primary">
-                  How to ESLint?
+                  How to use ESLint?
                 </Text>
               </ListItem>
             </List>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={1} lineHeight={2} textColor="white">
+              Why ESLint?
+            </Heading>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={1} lineHeight={2} textColor="white">
+              What is ESLint?
+            </Heading>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={1} lineHeight={2} textColor="white">
+              How to use ESLint?
+            </Heading>
           </BgSlide>
         </Deck>
       </Spectacle>
