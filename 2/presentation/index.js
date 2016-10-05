@@ -637,18 +637,10 @@ export default class Presentation extends React.Component {
               </ListItem>
               <ListItem>
                 <Text textColor="primary">
-                  ESLint
+                  ESLint -- custom coding style rule
                 </Text>
               </ListItem>
             </List>
-          </BgSlide>
-          <BgSlide transition={["slide"]}>
-            <CodePane
-              lang="js"
-              source={require("raw!../assets/codes/install.example")}
-              margin="0 20px 0"
-              textSize="0.6em"
-            />
           </BgSlide>
           <BgSlide transition={["slide"]}>
             <Heading size={1} lineHeight={2} textColor="white">
@@ -656,11 +648,100 @@ export default class Presentation extends React.Component {
             </Heading>
           </BgSlide>
           <BgSlide transition={["slide"]}>
-
+            <Heading size={5} lineHeight={2} textColor="white">
+              create project
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/npm-init.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
           </BgSlide>
-          <Slide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={5} lineHeight={2} textColor="white">
+              install eslint
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/install-eslint.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={5} lineHeight={2} textColor="white">
+              install Airbnb coding style packages
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/install-airbnb.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={5} lineHeight={2} textColor="white">
+              add .eslintrc.js
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/eslintrc.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={5} lineHeight={2} textColor="white">
+              write some code and lint it!
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/run-eslint.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={5} lineHeight={2} textColor="white">
+              write some code and lint it!
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/run-eslint.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={5} lineHeight={2} textColor="white">
+              custom rules in .eslintrc.js
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/eslint-custom.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={5} lineHeight={2} textColor="white">
+              custom rules in specific file
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/eslint-custom-file.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={5} lineHeight={2} textColor="white">
+              Thanks
+            </Heading>
+          </BgSlide>
 
-          </Slide>
+
         </Deck>
       </Spectacle>
     );
