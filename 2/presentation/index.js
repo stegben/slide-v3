@@ -41,6 +41,8 @@ require("spectacle/lib/themes/default/index.css");
 const images = {
   why: require("../assets/why.jpg"),
   ctlinSay: require("../assets/ctlin-say.png"),
+  npm2: require("../assets/npm2.png"),
+  browsers: require("../assets/browsers.png"),
 };
 
 preloader(images);
@@ -363,6 +365,56 @@ export default class Presentation extends React.Component {
                 </Text>
               </ListItem>
             </List>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={1} lineHeight={2} textColor="white">
+              some property
+            </Heading>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary">
+              Simplicity
+            </Text>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/simplicity.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary">
+              Object-Oriented Programming
+            </Text>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/oop.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary">
+              Functional Programming
+            </Text>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/fp.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary">
+              Community
+            </Text>
+            <Image src={images.npm2.replace("/", "")} style={{ width: '80%' }} />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary">
+              Best of the Best: Cross Platform
+            </Text>
+            <Image src={images.browsers.replace("/", "")} style={{ width: '80%' }} />
           </BgSlide>
 
           {/*
