@@ -40,6 +40,7 @@ require("spectacle/lib/themes/default/index.css");
 
 const images = {
   why: require("../assets/why.jpg"),
+  ctlinSay: require("../assets/ctlin-say.png"),
 };
 
 preloader(images);
@@ -132,15 +133,10 @@ export default class Presentation extends React.Component {
                   numbers (isNaN, floating point)
                 </Text>
               </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  global variables
-                </Text>
-              </ListItem>
             </List>
           </BgSlide>
           <BgSlide transition={["slide"]}>
-            <Heading size={3} lineHeight={2} textColor="white">
+            <Heading size={1} lineHeight={2} textColor="white">
               semicolon insertion
             </Heading>
           </BgSlide>
@@ -203,7 +199,7 @@ export default class Presentation extends React.Component {
               textSize="0.6em"
             />
             <Text textColor="primary">
-              or
+              ...
             </Text>
             <CodePane
               lang="js"
@@ -220,7 +216,7 @@ export default class Presentation extends React.Component {
               textSize="0.6em"
             />
             <Text textColor="primary">
-              or
+              ...
             </Text>
             <CodePane
               lang="js"
@@ -233,7 +229,7 @@ export default class Presentation extends React.Component {
             <Image src={images.why.replace("/", "")} style={{ width: '80%' }} />
             <Appear>
               <Text textColor="primary">
-                Because JS tries to add semicolon at the end of each line<br />
+                Because JS tries to add semicolon at the end of the line<br />
                 If nothing bad happend, the semicolon will remain there.
               </Text>
             </Appear>
@@ -244,9 +240,95 @@ export default class Presentation extends React.Component {
             </Heading>
           </BgSlide>
           <BgSlide transition={["slide"]}>
-            <Heading size={3} lineHeight={2} textColor="white">
-              semicolon insertion
+            <Heading size={1} lineHeight={2} textColor="white">
+              type transform
             </Heading>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Text textColor="primary" textSize="2em">
+              JS is Dynamic Week type.
+            </Text>
+            <List>
+              <Appear>
+                <ListItem>
+                  <Text textColor="primary">
+                    Dynamic: type checking during run-time
+                  </Text>
+                </ListItem>
+              </Appear>
+              <Appear>
+                <ListItem>
+                  <Text textColor="primary">
+                    Week: implicity type conversion
+                  </Text>
+                </ListItem>
+              </Appear>
+            </List>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/type-transform.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/type-transform-2.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/type-transform-3.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Image src={images.why.replace("/", "")} style={{ width: '80%' }} />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading textColor="primary">
+              Be carefull when transforming types
+            </Heading>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={1} lineHeight={2} textColor="white">
+              numbers
+            </Heading>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading textColor="primary" size={5} lineHeight={1.5}>
+              JavaScript use float64 as numbers (no int)<br />
+              (double-precision 64-bit format IEEE 754)
+            </Heading>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/numbers-1.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading textColor="primary" size={5} lineHeight={1.5}>
+              Another 雷
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/numbers-2.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Image src={images.ctlinSay.replace("/", "")} style={{ width: '80%' }} />
           </BgSlide>
 
           {/*
@@ -262,18 +344,19 @@ export default class Presentation extends React.Component {
             <List>
               <ListItem>
                 <Text textColor="primary">
+                  some property
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
                   prototype inheritance
                 </Text>
               </ListItem>
-            </List>
-            <List>
               <ListItem>
                 <Text textColor="primary">
                   this bind
                 </Text>
               </ListItem>
-            </List>
-            <List>
               <ListItem>
                 <Text textColor="primary">
                   closure
@@ -298,15 +381,11 @@ export default class Presentation extends React.Component {
                   Why ESLint?
                 </Text>
               </ListItem>
-            </List>
-            <List>
               <ListItem>
                 <Text textColor="primary">
                   What is ESLint?
                 </Text>
               </ListItem>
-            </List>
-            <List>
               <ListItem>
                 <Text textColor="primary">
                   How to ESLint?
