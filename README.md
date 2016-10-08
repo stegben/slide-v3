@@ -31,7 +31,7 @@
 - http
 - Express
 - more npm (run script)
-- simple client-side rendering example
+- simple server-side rendering example
 - Git warm up (原理、init、status、log、add、commit)
 - Git (github, remote, push, pull)
 
