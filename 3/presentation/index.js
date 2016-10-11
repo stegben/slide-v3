@@ -42,6 +42,8 @@ const images = {
   v8: require('../assets/v8.jpg'), // eslint-disable-line global-require
   nonblocking: require('../assets/nonblocking.png'), // eslint-disable-line global-require
   nodeApi: require('../assets/nodeApi.png'), // eslint-disable-line global-require
+  http: require('../assets/http1-req-res-details.png'), // eslint-disable-line global-require
+  url: require('../assets/url.png'), // eslint-disable-line global-require
 };
 
 preloader(images);
@@ -284,6 +286,131 @@ export default class Presentation extends React.Component {
             <Heading size={4} lineHeight={1} textColor="white">
               Demo & Practice
             </Heading>
+          </BgSlide>
+
+          { /* =================================
+            HTTP / express.js
+            ================================= */ }
+
+          <BgSlide transition={['slide']}>
+            <Heading size={1} lineHeight={2} textColor="white">
+              HTTP / Express.js
+            </Heading>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={3} lineHeight={2} textColor="white">
+              HTTP
+            </Heading>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  HyperText Transfer Protocol
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  超文本傳輸協定
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  HTTP Client 跟 Server 之間進行請求與回應的標準
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  2015/5 發表了 HTTP/2
+                </Text>
+              </ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Request & Response
+            </Heading>
+            <Image src={images.http.replace('/', '')} style={{ width: '80%' }} />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={3} lineHeight={2} textColor="white">
+              <Link href="https://www.tutorialspoint.com/http/http_requests.htm" target="_blank">HTTP request</Link>
+            </Heading>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  A Request-line
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  Zero or more header fields followed by CRLF
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  An empty line (i.e., a line with nothing preceding the CRLF)
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  Optionally a message-body
+                </Text>
+              </ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              HTTP request example
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/http-request.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={3} lineHeight={2} textColor="white">
+              <Link href="https://www.tutorialspoint.com/http/http_responses.htm" target="_blank">HTTP response</Link>
+            </Heading>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  A Status-line
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  Zero or more header fields followed by CRLF
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  An empty line (i.e., a line with nothing preceding the CRLF)
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  Optionally a message-body
+                </Text>
+              </ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              HTTP response example
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/http-response.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              URL structure
+            </Heading>
+            <Image src={images.url.replace('/', '')} style={{ width: '80%' }} />
           </BgSlide>
         </Deck>
       </Spectacle>
