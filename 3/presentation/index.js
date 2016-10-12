@@ -638,6 +638,54 @@ export default class Presentation extends React.Component {
               textSize="0.6em"
             />
           </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={3} lineHeight={2} textColor="white">
+              Server side render
+            </Heading>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              其實就是字串解析
+            </Heading>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  讀取 template
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  語法分解（正規表達式）
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  產生待執行語句
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  與資料一起執行，產生字串
+                </Text>
+              </ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              render template
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/render-template.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              demo
+            </Heading>
+          </BgSlide>
         </Deck>
       </Spectacle>
     );
