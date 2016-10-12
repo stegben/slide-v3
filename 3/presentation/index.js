@@ -44,6 +44,7 @@ const images = {
   nodeApi: require('../assets/nodeApi.png'), // eslint-disable-line global-require
   http: require('../assets/http1-req-res-details.png'), // eslint-disable-line global-require
   url: require('../assets/url.png'), // eslint-disable-line global-require
+  middleware: require('../assets/middleware.png'), // eslint-disable-line global-require
 };
 
 preloader(images);
@@ -411,6 +412,231 @@ export default class Presentation extends React.Component {
               URL structure
             </Heading>
             <Image src={images.url.replace('/', '')} style={{ width: '80%' }} />
+          </BgSlide>
+
+          { /* =================================
+            Express.js
+            ================================= */ }
+
+          <BgSlide transition={['slide']}>
+            <Heading size={3} lineHeight={2} textColor="white">
+              Express.js
+            </Heading>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  web framework for Node.js
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  npm install express --save
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  npm install express-generator -g
+                </Text>
+              </ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={3} lineHeight={2} textColor="white">
+              Express.js 101
+            </Heading>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  middleware
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  routing
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  request (query, params, body)
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  response (send, json)
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  render view
+                </Text>
+              </ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Simple express.js server
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/express-init.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Middleware
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/express-middleware.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Middleware
+            </Heading>
+            <Image src={images.middleware.replace('/', '')} style={{ width: '80%' }} />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Middleware 針對 path
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/express-middleware-path.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Routing
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/express-routing.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              express.Router
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/express-router.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              解析 Request
+            </Heading>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  req.params
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  req.query
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  req.body
+                </Text>
+              </ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              req.params (1/3)
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/express-req-params.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              req.query (2/3)
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/express-req-query.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              req.body (3/3)
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/express-req-body.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              回傳 Response
+            </Heading>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  res.send
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  res.json
+                </Text>
+              </ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              res.send(1/2)
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/express-res-send.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              res.json(2/2)
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/express-res-json.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Render view
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/express-render-view.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
           </BgSlide>
         </Deck>
       </Spectacle>
