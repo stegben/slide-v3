@@ -686,6 +686,38 @@ export default class Presentation extends React.Component {
               demo
             </Heading>
           </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              <Link href="http://www.slideshare.net/lkiral/git-34157836">Git Warm up</Link>
+            </Heading>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              今天帶走這些即可
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/git-basic.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              npm script
+            </Heading>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              package.json
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/npm-script.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
         </Deck>
       </Spectacle>
     );
