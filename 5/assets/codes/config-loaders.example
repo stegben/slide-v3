@@ -1,0 +1,16 @@
+module.exports = {
+  ...
+  module: {
+    loaders: [{
+      test: /\.js$/,               // type of file to transform
+      loaders: ['babel-loader'],   // what loaders to use
+      exclude: /node_modules/      // don't transform these files
+    }, {
+      test: /\.css$/,
+      loaders: [
+        'style-loader',
+        'css-loader',
+      ],
+    }]
+  }
+};
