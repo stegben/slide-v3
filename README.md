@@ -12,20 +12,20 @@
 	- [Learn Layout](http://learnlayout.com/)
 
 
-## W1: Web Programming Overview
+## W1: Web Programming Overview (09/21)
 - 課程大綱
 - History 發展
 - 現代網站設計的概念與語言
 - JavaScript Basic
 - DOM
 
-## W2: More on JavaScript 
+## W2: More on JavaScript (10/05)
 - Good Parts (Syntax..)
 - Bad Parts (Type..)
 - npm
 - ESLint
 
-## W3: Node
+## W3: Node (10/12)
 - CommonJS
 - fs
 - http
@@ -35,36 +35,36 @@
 - Git warm up (原理、init、status、log、add、commit)
 - Git (github, remote, push, pull)
 
-## W4: Modern JavaScript
+## W4: Modern JavaScript (10/19)
 - Trends
 - ES6 (ES2015)
 - Babel
 - JSX
 - React Basic
 
-## W5: Webpack
+## W5: Webpack (10/26)
 - CommonJS on client
 - Webpack Basic
 - Loaders
 - Git collaboration (branch, checkout)
 - Github pages
 
-## W6: React 課堂實作 (Calculator using React.js)
+## W6: React 課堂實作 (Calculator using React.js) (11/02)
 - More on React
 - Lifecycle hook
 - with css, styles together (inline-style, className)
 
-## W7: Advanced Front-end 
+## W7: Advanced Front-end (11/09)
 - UI framework
 - React Router
 - Advanced webpack config (production build)
 
-## W8: API
+## W8: API (11/09)
 - Promise
 - Fetch
 - API Design
 
-## W9: Testing
+## W9: Testing (11/16)
 - TDD
 - Coverage
 - CI
@@ -72,37 +72,37 @@
 - GitFlow, GithubFlow
 - 專案管理 (SEMVER, alpha, beta, rc)
 
-## W10: In-class Hackathon
+## W10: In-class Hackathon (11/23)
 Individual，題目自訂，須依照一些前面教過的基本架構
 
-## W11: Database
+## W11: Database + MS Azure (11/30)
 - ACID
 - CAP
 - RDBMS
 - SQL
 
-## W12: Backend framework
+## W12: Backend framework (12/07)
 - Express Blog
 - Routing (RESTful)
 - MVC
 
-## W13: Other Backend Good stuff
+## W13: Other Backend Good stuff (12/14)
 - Generator
 - Migration
 - Model
 - Association
 
-## W14: Redux 
+## W14: Redux (12/21)
 - Action
 - Store
 - Reducer
 - Middleware
 - react-redux
 
-## W15: Deploy
+## W15: Deploy (12/28)
 - Nginx
 - PM2
 - tmux
 
-## Optional: React Native
+## Optional: React Native (01/04)
 
