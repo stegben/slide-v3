@@ -40,6 +40,7 @@ require("spectacle/lib/themes/default/index.css");
 
 const images = {
   webpack: require("../assets/webpack.png"),
+  bg2: require("../assets/bg2.png"),
 };
 
 preloader(images);
@@ -78,8 +79,42 @@ export default class Presentation extends React.Component {
 
           <BgSlide transition={["slide"]}>
             <Heading size={5} lineHeight={1} textColor="white">
-              But now we're facing another problem...
+              But now we're facing other problems...
             </Heading>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  hard to use CommonJS in client-side
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  too many third-party packages
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  global naming
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  ...
+                </Text>
+              </ListItem>
+            </List>
+          </BgSlide>
+
+          <BgSlide transition={["slide"]}>
+            <Heading size={5} lineHeight={1} textColor="white">
+              Can we pack all the codes in one single file?
+            </Heading>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={5} lineHeight={1} textColor="white">
+              Webpack
+            </Heading>
+            <Image src={images.webpack.replace("/", "")} style={{ width: '90%' }} />
           </BgSlide>
 
           <BgSlide transition={["slide"]}>
@@ -94,7 +129,7 @@ export default class Presentation extends React.Component {
               </ListItem>
               <ListItem>
                 <Text textColor="primary">
-                  Webpack Loaders and Plugins
+                  Webpack Loaders
                 </Text>
               </ListItem>
               <ListItem>
@@ -137,12 +172,14 @@ export default class Presentation extends React.Component {
               </ListItem>
             </List>
           </BgSlide>
+        {/*
           <BgSlide>
             <Heading size={4} lineHeight={2} textColor="white">
               Webpack
             </Heading>
             <Image src={images.webpack.replace("/", "")} style={{ width: '90%' }} />
           </BgSlide>
+        */}
           <BgSlide transition={["slide"]}>
             <Heading size={4} lineHeight={2} textColor="white">
               Installation
@@ -206,6 +243,17 @@ export default class Presentation extends React.Component {
           </BgSlide>
           <BgSlide transition={["slide"]}>
             <Heading size={4} lineHeight={2} textColor="white">
+              Config file
+            </Heading>
+            <CodePane
+              lang="bash"
+              source={require("raw!../assets/codes/simple-config-command.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={4} lineHeight={2} textColor="white">
               Practice
             </Heading>
           </BgSlide>
@@ -218,20 +266,8 @@ export default class Presentation extends React.Component {
          */}
           <BgSlide transition={["slide"]}>
             <Heading size={3} lineHeight={2} textColor="white">
-              Loaders and Plugins
+              Loaders
             </Heading>
-            <List>
-              <ListItem>
-                <Text textColor="primary">
-                  Loaders
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text textColor="primary">
-                  Plugins
-                </Text>
-              </ListItem>
-            </List>
           </BgSlide>
           <BgSlide transition={["slide"]}>
             <Text textColor="primary">
@@ -257,6 +293,115 @@ export default class Presentation extends React.Component {
               textSize="0.6em"
             />
           </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Loaders -- Babel Loader
+            </Heading>
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Loaders -- Babel Loader
+            </Heading>
+            <CodePane
+              lang="bash"
+              source={require("raw!../assets/codes/babel-loader-installation.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Loaders -- Babel Loader
+            </Heading>
+            <CodePane
+              lang="json"
+              source={require("raw!../assets/codes/babel-loader-babelrc.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Loaders -- Babel Loader
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/babel-loader-config.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Loaders -- css & style Loader
+            </Heading>
+
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Loaders -- css & style Loader
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/style-loader-installation.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Loaders -- css & style Loader
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/style-loader-config.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Loaders -- css & style Loader
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/codes/style-loader-allow.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Topics not covered yet:
+            </Heading>
+            <List>
+              <ListItem>
+                <Text textColor="primary">
+                  Plugins (often used in production mode)
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  Production settings
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  Hot Module replacement
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  Code Splitting
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  <a href="https://github.com/css-modules/webpack-demo">CSS Modules</a>
+                </Text>
+              </ListItem>
+            </List>
+          </BgSlide>
 
           {/*
 
@@ -280,25 +425,113 @@ export default class Presentation extends React.Component {
               </ListItem>
             </List>
           </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Github Flow
+            </Heading>
+            <a href="https://guides.github.com/introduction/flow/">intro</a>
+          </BgSlide>
+
+          <BgSlide transition={["slide"]}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Create branch
+            </Heading>
+            <CodePane
+              lang="bash"
+              source={require("raw!../assets/codes/create-branch.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              List branches
+            </Heading>
+            <CodePane
+              lang="bash"
+              source={require("raw!../assets/codes/list-branches.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Change to other branch
+            </Heading>
+            <CodePane
+              lang="bash"
+              source={require("raw!../assets/codes/change-branch.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Delete branch
+            </Heading>
+            <CodePane
+              lang="bash"
+              source={require("raw!../assets/codes/delete-branch.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Merge branch locally (not suggested)
+            </Heading>
+            <CodePane
+              lang="bash"
+              source={require("raw!../assets/codes/merge-branch.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Push branch and PR on GitHub (suggested)
+            </Heading>
+            <CodePane
+              lang="bash"
+              source={require("raw!../assets/codes/push-branch.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={["slide"]}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Pull branch
+            </Heading>
+            <CodePane
+              lang="bash"
+              source={require("raw!../assets/codes/pull-branch.example")}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
 
           <BgSlide transition={["slide"]}>
             <Heading size={3} lineHeight={2} textColor="white">
-              Hot Reload
+              Github Pages
             </Heading>
             <List>
               <ListItem>
                 <Text textColor="primary">
-                  devtool
+                  Create "gh-pages" branch
                 </Text>
               </ListItem>
               <ListItem>
                 <Text textColor="primary">
-                  plugins
+                  Add index.html
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text textColor="primary">
+                  Link to [username].github.io/[project name]
                 </Text>
               </ListItem>
             </List>
           </BgSlide>
-
 
         </Deck>
       </Spectacle>

@@ -1,0 +1,2 @@
+# directly call webpack, setup config path
+webpack --config webpack.comfig.js
