@@ -303,7 +303,7 @@ export default class Presentation extends React.Component {
           </BgSlide>
           <BgSlide transition={["slide"]}>
             <Heading size={4} lineHeight={2} textColor="white">
-              inline style
+              <a href="https://speakerdeck.com/vjeux/react-css-in-js">inline style</a>
             </Heading>
             <CodePane
               lang="js"
@@ -311,6 +311,9 @@ export default class Presentation extends React.Component {
               margin="0 20px 0"
               textSize="0.6em"
             />
+            <Text textColor="primary">
+              Also used in React-Native development
+            </Text>
           </BgSlide>
           <BgSlide transition={["slide"]}>
             <Heading size={4} lineHeight={2} textColor="white">
